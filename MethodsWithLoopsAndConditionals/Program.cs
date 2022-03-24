@@ -21,35 +21,35 @@ namespace MethodsWithLoopsAndConditionals
                 {
                     case 1:
                         PrintNeg1000Through1000();
-                        Answer();
+                        Space();
                         break;
                     case 2:
                         Print3Through999By3();
-                        Answer();
+                        Space();
                         break;
                     case 3:
                         AreTheyEqual();
-                        Answer();
+                        Space();
                         break;
                     case 4:
                         IsItEvenOrOdd();
-                        Answer();
+                        Space();
                         break;
                     case 5:
                         CanYouVote();
-                        Answer();
+                        Space();
                         break;
                     case 6:
                         IfBetweenNeg10And10();
-                        Answer();
+                        Space();
                         break;
                     case 7:
                         MultiplicationTable();
-                        Answer();
+                        Space();
                         break;
                     default:
                         Console.WriteLine("Invalid Selection");
-                        Answer();
+                        Space();
                         break;
                 }
                 Console.WriteLine("Hit enter to perform another task, type 'exit' to exit");
@@ -58,36 +58,47 @@ namespace MethodsWithLoopsAndConditionals
         }
         static void PrintNeg1000Through1000()
         {
-            var list = new List<int>();
-            int num = -1000;
-            while (num <= 1000)
+            Space();
+            //var list = new List<int>();
+            //int num = -1000;
+            //while (num <= 1000)
+            //{
+            //    list.Add(num);
+            //    num++;
+            //}
+            //foreach(var printNumber in list)
+            //{
+            //    Console.WriteLine(printNumber);
+            //}
+            for (int i = -1000; i <= 1000; i++)
             {
-                list.Add(num);
-                num++;
-            }
-            foreach(var printNumber in list)
-            {
-                Console.WriteLine(printNumber);
+                Console.WriteLine(i);
             }
 
         }
 
         static void Print3Through999By3()
         {
-            var list = new List<int>();
-            int num = 3;
-            while (num <= 999)
+            Space();
+            //var list = new List<int>();
+            //int num = 3;
+            //while (num <= 999)
+            //{
+            //    list.Add(num);
+            //    num += 3;
+            //}
+            //foreach (int printNumber in list)
+            //{
+            //    Console.WriteLine(printNumber);
+            //}
+            for (int i = 3; i <= 999; i += 3)
             {
-                list.Add(num);
-                num += 3;
-            }
-            foreach (int printNumber in list)
-            {
-                Console.WriteLine(printNumber);
+                Console.WriteLine(i);
             }
         }
         static void AreTheyEqual()
-        {   
+        {
+            Space();
             Console.WriteLine("What is the value of x?");
             int x = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("What is the value of y?");
@@ -98,6 +109,7 @@ namespace MethodsWithLoopsAndConditionals
         }
         static void IsItEvenOrOdd()
         {
+            Space();
             Console.WriteLine("Enter a number to check if it is even or odd");
             int num = Convert.ToInt32(Console.ReadLine());
 
@@ -106,6 +118,7 @@ namespace MethodsWithLoopsAndConditionals
         }
         static void CanYouVote()
         {
+            Space();
             Console.WriteLine("How old are you?");
             int age = Convert.ToInt32(Console.ReadLine());
 
@@ -114,6 +127,7 @@ namespace MethodsWithLoopsAndConditionals
         }
         static void IfBetweenNeg10And10()
         {
+            Space();
             Console.WriteLine("Enter a number to check if it is between -10 and 10");
             int num = Convert.ToInt32(Console.ReadLine());
 
@@ -122,6 +136,7 @@ namespace MethodsWithLoopsAndConditionals
         }
         static void MultiplicationTable()
         {
+            Space();
             Console.WriteLine("Enter an integer to make a multiplication table with multiples 1-12");
             int num = Convert.ToInt32(Console.ReadLine());
 
@@ -130,12 +145,12 @@ namespace MethodsWithLoopsAndConditionals
                 Console.WriteLine($"{num}x{x}={num*x}");
             }
         }
-        static void Answer()
+        static void Space()
         {
-            Console.WriteLine("|");
-            Console.WriteLine("|");
-            Console.WriteLine("|");
-            Console.WriteLine("|");
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
         }
     }
 }
