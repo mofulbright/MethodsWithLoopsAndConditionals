@@ -8,40 +8,53 @@ namespace MethodsWithLoopsAndConditionals
         static void Main(string[] args)
         {
             int selection;
-
+            string wantToContinue;
             do
             {
                 Console.WriteLine("Which task do you want to perform?");
                 Console.WriteLine("1. Print -1000 through 1000 \n2. Print 3 through 999 by 3" +
                     "\n3. Are they equal\n4. Is it even or odd\n5. Can you vote" +
-                    "\n6. Is it between -10 and 10\n7. Multiplication Table\n8. Exit");
+                    "\n6. Is it between -10 and 10\n7. Multiplication Table");
 
                 selection = Convert.ToInt32(Console.ReadLine());
                 switch (selection)
                 {
                     case 1:
                         PrintNeg1000Through1000();
+                        Answer();
                         break;
                     case 2:
                         Print3Through999By3();
+                        Answer();
                         break;
                     case 3:
                         AreTheyEqual();
+                        Answer();
                         break;
                     case 4:
                         IsItEvenOrOdd();
+                        Answer();
                         break;
                     case 5:
                         CanYouVote();
+                        Answer();
                         break;
                     case 6:
                         IfBetweenNeg10And10();
+                        Answer();
                         break;
                     case 7:
                         MultiplicationTable();
+                        Answer();
+                        break;
+                    default:
+                        Console.WriteLine("Invalid Selection");
+                        Answer();
                         break;
                 }
-            } while (selection != 8);
+                Console.WriteLine("Hit enter to perform another task, type 'exit' to exit");
+                wantToContinue = Console.ReadLine().ToLower();
+            } while (wantToContinue != "exit");
         }
         static void PrintNeg1000Through1000()
         {
@@ -116,6 +129,13 @@ namespace MethodsWithLoopsAndConditionals
             {
                 Console.WriteLine($"{num}x{x}={num*x}");
             }
+        }
+        static void Answer()
+        {
+            Console.WriteLine("|");
+            Console.WriteLine("|");
+            Console.WriteLine("|");
+            Console.WriteLine("|");
         }
     }
 }
