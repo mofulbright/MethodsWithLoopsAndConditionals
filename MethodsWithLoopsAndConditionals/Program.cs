@@ -87,7 +87,7 @@ namespace MethodsWithLoopsAndConditionals
             }
         }
         static void AreTheyEqual()
-        {
+        {   
             Console.WriteLine("What is the value of x?");
             int x = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("What is the value of y?");
@@ -98,7 +98,7 @@ namespace MethodsWithLoopsAndConditionals
         }
         static void IsItEvenOrOdd()
         {
-            Console.WriteLine("Enter a number");
+            Console.WriteLine("Enter a number to check if it is even or odd");
             int num = Convert.ToInt32(Console.ReadLine());
 
             var evenOrOdd = (num % 2 == 0) ? $"{num} is even" : $"{num} is odd";
@@ -114,7 +114,7 @@ namespace MethodsWithLoopsAndConditionals
         }
         static void IfBetweenNeg10And10()
         {
-            Console.WriteLine("Enter a number");
+            Console.WriteLine("Enter a number to check if it is between -10 and 10");
             int num = Convert.ToInt32(Console.ReadLine());
 
             var between = (num <= 10 && num >= -10) ? $"{num} is between -10 and 10" : $"{num} is not between -10 and 10";
@@ -122,7 +122,7 @@ namespace MethodsWithLoopsAndConditionals
         }
         static void MultiplicationTable()
         {
-            Console.WriteLine("Enter an integer to make a multiplication table");
+            Console.WriteLine("Enter an integer to make a multiplication table with multiples 1-12");
             int num = Convert.ToInt32(Console.ReadLine());
 
             for (int x = 1; x <= 12; x++)
